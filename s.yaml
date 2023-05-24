@@ -1,0 +1,20 @@
+edition: 1.0.0
+name: my-framework-app
+access: default
+services:
+  framework:
+    component: fc
+    props:
+      region: cn-hangzhou
+      service:
+        name: serverless-devs-application
+      function:
+        name: NeteaseCloudMusicApi-dw24
+        description: Initialize
+        runtime: nodejs16
+        handler: node app.js
+        memorySize: 128
+        cpu: 0.05
+        timeout: 60
+        codeUri: ./
+        diskSize: 512
